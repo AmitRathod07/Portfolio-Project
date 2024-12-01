@@ -1,0 +1,95 @@
+.about {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 50vh;
+    width: 100%;
+    background:
+      linear-gradient(to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)),
+      url('../img/model3300.jpg') center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__bio {
+    width: 80%;
+    text-align: center;
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .bio {
+    font-size: smaller;
+  }
+
+  .jobs {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    scroll-behavior: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px; // Scrollbar width
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff652f; // Thumb color
+      border-radius: 4px; // Rounded edges
+      border: 2px solid #414141; // Space between thumb and track
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #272727; // Track color
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #ff853f; // Hover state for the thumb
+    }
+
+    &__job {
+      background: lighten($primary-color, 10%);
+      padding: 0.5rem;
+      border-bottom: 5px solid $secondary-color;
+
+      h2,
+      h3 {
+        margin: 0.5rem 0;
+      }
+
+      h6 {
+        margin: 0.3rem 0;
+      }
+
+      p {
+        text-indent: 50px;
+        text-align: justify;
+        // letter-spacing: 3px;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    transform:
+      rotate(90deg) translate(-3rem, -5rem);
+  }
+}
